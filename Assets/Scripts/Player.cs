@@ -29,13 +29,9 @@ public class Player : MonoBehaviour
     {
         CalculateMovement();
 
-        //if i hit space key
-        //spawn gameobject
-
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > _canFire)
         {
-            //Debug.Log("Space Key Pressed");
-            Instantiate(_laserPrefab, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity);
+            FireLaser();
         }
     }
 
@@ -59,5 +55,11 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(11.3f, transform.position.y, 0);
         }
+    }
+
+    void FireLaser()
+    {
+         _canFire = Time.time + _fireRate;
+         Instantiate(_laserPrefab, transform.position + new Vector3(0, 0.8f, 0), Quaternion.identity);
     }
 }
