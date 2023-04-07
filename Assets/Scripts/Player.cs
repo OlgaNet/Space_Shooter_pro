@@ -5,10 +5,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    //public or private reference
-    //data type (int, float, bool, string)
-    //every variable has a name
-    //optinal value assigned
     [SerializeField]
     private float _speed = 3.5f;
     [SerializeField]
@@ -23,9 +19,8 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //take the current position = new position(0, 0, 0)
         transform.position = new Vector3(-1.5f, -2.65f, 0);
-        _spawnManadger = GameObject.Find("Spawn_Manadger").GetComponent<SpawnManadger>(); //Find The GameObject. Then Get Component
+        _spawnManadger = GameObject.Find("Spawn_Manadger").GetComponent<SpawnManadger>(); 
 
         if (_spawnManadger == null)
         {
@@ -78,8 +73,6 @@ public class Player : MonoBehaviour
 
         if (_lives < 1)
         {
-            //Communicate with Spawn Manadger
-            //Let them know to stop spawning
             _spawnManadger.OnPlayerDeath();
             Destroy(this.gameObject);
         }
