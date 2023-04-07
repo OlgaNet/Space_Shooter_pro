@@ -36,14 +36,8 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        //if other is Player
-        //damage the player
-        //destroy Us
         if (other.tag == "Player")
         {
-            //damage player
-            //other.transform.GetComponent<Player>().Damage();
-            //other.transform.GetComponent<MeshRender>().material.color();
             Player player = other.transform.GetComponent<Player>();
 
             if (player != null)
@@ -54,9 +48,6 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        //if other is laser
-        //destroy laser
-        //destroy Us
         if (other.tag == "Laser")
         {
             Destroy(other.gameObject);
