@@ -18,12 +18,19 @@ public class Player : MonoBehaviour
     private float _canFire = -1f;
     [SerializeField]
     private int _lives = 4;
+    private SpawnManadger _spawnManadger;
 
     // Start is called before the first frame update
     void Start()
     {
         //take the current position = new position(0, 0, 0)
         transform.position = new Vector3(-1.5f, -2.65f, 0);
+        _spawnManadger = GameObject.Find("Spawn_Manadger").GetComponent<SpawnManadger>(); //Find The GameObject. Then Get Component
+
+        if (_spawnManadger == null)
+        {
+            Debug.LogError("The Spawn Manadger is NULL.");
+        }
     }
 
     // Update is called once per frame
@@ -71,6 +78,9 @@ public class Player : MonoBehaviour
 
         if (_lives < 1)
         {
+            //Communicate with Spawn Manadger
+            //Let them know to stop spawning
+            _spawnManadger.OnPlayerDeath();
             Destroy(this.gameObject);
         }
     }

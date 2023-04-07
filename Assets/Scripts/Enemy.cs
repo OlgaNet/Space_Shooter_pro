@@ -8,8 +8,6 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField]
     private float _speed = 4.0f;
-   // [SerializeField]
-    //private GameObject _enemyPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +27,6 @@ public class Enemy : MonoBehaviour
         {
             float randomX = Random.Range(-8f, 8f);
             transform.position = new Vector3(randomX, 7, 0);
-            //Instantiate(_enemyPrefab, transform.position, Quaternion.identity);
         }
 
     }
