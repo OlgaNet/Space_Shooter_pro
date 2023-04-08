@@ -411,9 +411,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
-  _laserPrefab: {fileID: 8932051142832786301, guid: 5d0ed9fa72f87ae4ca3566292ca7f021, type: 3}
+  _laserPrefab: {fileID: 7901995733174202088, guid: 5d0ed9fa72f87ae4ca3566292ca7f021, type: 3}
   _fireRate: 0.15
-  _lives: 4
+  _lives: 3
 --- !u!212 &2063243083
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -452,7 +452,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 224703883
+  m_SortingLayerID: 1448278681
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1b4a8fdd39d3a45d0a9ee484ad6800ec, type: 3}
@@ -491,7 +491,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.02839166, y: 0.14195907}
@@ -562,7 +562,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1787689183
+  m_SortingLayerID: 170632745
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 351f30ffb741fd643b82bde90a222699, type: 3}
